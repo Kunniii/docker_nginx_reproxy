@@ -36,13 +36,13 @@ services:
       - mysql
     restart: unless-stopped
     env_file: .env
-    environment:
-      - WORDPRESS_DB_HOST=mysql:3306
-      - WORDPRESS_DB_USER=root # should change in PROD
-      - WORDPRESS_DB_PASSWORD=$MYSQL_ROOT_PASSWORD
-      - WORDPRESS_DB_NAME=web1
+    # environment:
+    #   - WORDPRESS_DB_HOST=mysql:3306
+    #   - WORDPRESS_DB_USER=root # should change in PROD
+    #   - WORDPRESS_DB_PASSWORD=$MYSQL_ROOT_PASSWORD
+    #   - WORDPRESS_DB_NAME=web1
     volumes:
-      - ./wordpress/web1/:/var/www/html/
+      - ./wordpress/Tiger/:/var/www/html/
     networks:
       - nginx-internal
 
@@ -53,13 +53,13 @@ services:
       - mysql
     restart: unless-stopped
     env_file: .env
-    environment:
-      - WORDPRESS_DB_HOST=mysql:3306
-      - WORDPRESS_DB_USER=root # should change in PROD
-      - WORDPRESS_DB_PASSWORD=$MYSQL_ROOT_PASSWORD
-      - WORDPRESS_DB_NAME=web2
+    # environment:
+    #   - WORDPRESS_DB_HOST=mysql:3306
+    #   - WORDPRESS_DB_USER=root # should change in PROD
+    #   - WORDPRESS_DB_PASSWORD=$MYSQL_ROOT_PASSWORD
+    #   - WORDPRESS_DB_NAME=web2
     volumes:
-      - ./wordpress/web2/:/var/www/html/
+      - ./wordpress/TandT/:/var/www/html/
     networks:
       - nginx-internal
 
